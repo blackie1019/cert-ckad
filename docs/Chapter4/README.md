@@ -2,7 +2,9 @@
 
 ## Multi-container Pods
 
-### 3 
+將多個 container 放置在同一個 Pod 內
+
+### 3 purpose
 
 - Shared Network
 

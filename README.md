@@ -2,6 +2,8 @@
 
 Main Course from [Certified Kubernetes Application Developer (CKAD)](https://learn.acloud.guru/course/d068441f-75b4-4fe8-a7a6-df9153f24a35/)
 
+---
+
 ## Sections
 
 ### Chapter 2
@@ -19,12 +21,27 @@ Main Course from [Certified Kubernetes Application Developer (CKAD)](https://lea
 
 - `ConfigMap`
 - `SecurityContexts`
+- `Resource Requirements`
+- `Secrets`
+- `ServiceAccounts`
 
-- [Chapter 3](docs/Chapter3/README.md)
+[Chapter 3](docs/Chapter3/README.md)
 
 ### Chapter 4
 
-TBD
+- Shared Network
+
+  ![01.png](/docs/Chapter4/images/01.png)
+
+- Shared Storage Volumes
+  
+  ![02.png](/docs/Chapter4/images/02.png)
+
+- Shared Process
+
+  ![03.png](/docs/Chapter4/images/03.png)
+
+[Chapter 4](docs/Chapter4/README.md)
 
 ### Chapter 5
 
@@ -49,6 +66,8 @@ TBD
 ### Chapter 10
 
 TBD
+
+---
 
 ## References
 
