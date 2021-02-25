@@ -4,6 +4,33 @@ Main Course from [Certified Kubernetes Application Developer (CKAD)](https://lea
 
 ---
 
+## Setup Terminal
+
+Kubectl autocomplete and alias `k`
+
+```sh
+source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
+echo "source <(kubectl completion bash)" >> ~/.bashrc # add autocomplete permanently to your bash shell.
+
+alias k=kubectl
+complete -F __start_kubectl k
+```
+
+Ref to [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+## Resources allowed during exam
+
+During the exam, candidates may:
+
+- review the Exam content instructions that are presented in the command line terminal
+- review Documents installed by the distribution (i.e. /usr/share and its subdirectories)
+- use their Chrome or Chromium browser to open one additional tab in order to access assets at: https://kubernetes.io/docs/, https://github.com/kubernetes/,  https://kubernetes.io/blog/ and their subdomains. This includes all available language translations of these pages (e.g. https://kubernetes.io/zh/docs/)
+- No other tabs may be opened and no other sites may be navigated to   (including https://discuss.kubernetes.io/). 
+
+*The allowed sites above may contain links that point to external sites. It is the responsibility of the candidate not to click on any links that cause them to navigate to a domain that is not allowed.*
+
+---
+
 ## Sections
 
 ### Chapter 2
@@ -12,7 +39,7 @@ Main Course from [Certified Kubernetes Application Developer (CKAD)](https://lea
 
 - [About *Cloud Native - Certified Kubernetes Application Developer (CKAD)* exam](docs/About-Exam.md)
 - [Chapter 2.1 : Build Your Practice Cluster](docs/Chapter2.1_Build-Your-Practice-Cluster/README.md)
-- [CHAPTER 2.2 : Kubernetes API Primitives](docs/Chapter2.2_Kubernetes-API-Primitives/README.md)
+- [Chapter 2.2 : Kubernetes API Primitives](docs/Chapter2.2_Kubernetes-API-Primitives/README.md)
 - [Chapter 2.3 : Creating Pods](docs/Chapter2.3_Creating-Pods/README.md)
 - [Chapter 2.4 : Namespaces](docs/Chapter2.4_Namespaces/README.md)
 - [Chapter 2.5 : Basic Container Configuration](docs/Chapter2.5_Basic-Container-Configuration/README.md)
