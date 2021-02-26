@@ -18,6 +18,29 @@ complete -F __start_kubectl k
 
 Ref to [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
+## CKAD Exercises
+
+- [CKAD Exercises](https://github.com/dgkanatsios/CKAD-exercises)
+- [Kubernetes documentation - Tasks](https://kubernetes.io/docs/tasks/)
+
+### Important
+
+- Easily create the pod that was just described using YAML:
+  
+  ```sh
+  kubectl run nginx --image=nginx --restart=Never --dry-run=client -n mynamespace -o yaml > pod.yaml
+  kubectl create -f pod.yaml
+  ```sh
+
+- Most quick way to create a object
+  
+  ```sh
+  kubectl run nginx --image=nginx   (deployment)
+  kubectl run nginx --image=nginx --restart=Never   (pod)
+  kubectl run busybox --image=busybox --restart=OnFailure   (job)
+  kubectl run busybox --image=busybox --schedule="* * * * *"  --restart=OnFailure (cronJob)
+  ```
+
 ## Resources allowed during exam
 
 During the exam, candidates may:
@@ -72,11 +95,22 @@ During the exam, candidates may:
 
 ### Chapter 5
 
-TBD
+- Probes
+- Logs command
+- Installing Metrics Server
+- Top command
+- Debugging
+
+[Chapter 5](docs/Chapter5/README.md)
 
 ### Chapter 6
 
-TBD
+- Labels, Selectors, and Annotations
+- Deployments
+- Rolling Updates and Rollbacks
+- Jobs and CronJobs
+
+[Chapter 6](docs/Chapter6/README.md)
 
 ### Chapter 7
 
@@ -93,6 +127,12 @@ TBD
 ### Chapter 10
 
 TBD
+
+---
+
+## Others
+
+[others](docs/others/README.md)
 
 ---
 
