@@ -114,7 +114,7 @@ During the exam, candidates may:
 
 ### Chapter 7
 
-TBD
+[Chapter 7](doc/../docs/Chapter7/README.md)
 
 ### Chapter 8
 

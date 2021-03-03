@@ -70,6 +70,7 @@ The CKA and CKAD exam environment will be aligned with the most recent K8s minor
 
 
 ## CKAD Environment
+
 https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad#cka-and-ckad-environment
 
 |Cluster| Members| CNI| Description|
@@ -78,3 +79,42 @@ https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad#cka-and
 |dk8s|  1 master 1 worker| flannel| k8s cluster|
 |nk8s|  1 master 2 worker|  calico|  k8s cluster|
 |sk8s| 1 master 1 worker| flannel| k8s cluster|
+
+---
+
+## 
+
+[https://github.com/yuyicai/cka-ckad-exam-experience](https://github.com/yuyicai/cka-ckad-exam-experience)
+
+- 考试难度
+
+  总的来说CKA考试还是相对简单的，如果你有k8s生产环境维护使用经验，大可以直接考试，过线是没问题的 ；CKAD难度也不大，题量较CKA大，需要注意每道题不超过6分钟
+
+- kubectl自动补全
+
+  注意使用kubectl自动补全，考试环境默认已经配置了kubectl自动补全，无需考生另行配置，但是这还不够，我们可以用k代替kubectl kubectl Cheat Sheet
+
+  ```sh
+  alias k=kubectl
+  complete -F __start_kubectl k
+  ```
+
+- 使用考试环境提供的记事本
+
+  使用记事本，考试过程中，最好将使用过的命令记录到记事本，后面的题目可以稍微改动再使用（特别是创建pod的命令，估计要使用七八次吧）
+
+- 使用--dry-run生成yaml
+
+  使用`--dry-run`参数来生成一个基础的yaml，再按照题目要求修改这个基础yaml文件，不要纯手写yaml。如果题目无特殊要求，能kubectl命令完成的就不要使用yaml文件，这个比较浪费时间。
+
+- 浏览器收藏夹
+
+  将上面备考中的github仓库练习题中提到的官方文档保存到浏览器收藏夹，这样做的目的是在浏览器地址栏输入关键词，就会弹出收藏好的官方文档地址，就可以直达对应的文档，不需要在官方文档上再一次搜索
+
+- vim编辑器
+
+  vim编辑器要求不高，但是你至少要知道如何进入编辑模式，如何保存文档，复制粘贴之类的快捷键记不记都行，可以右键复制粘贴
+
+- web终端中的复制粘贴
+
+  web终端中无法使用`Ctrl+C`、`Ctrl+V`（考试提供的记事本可以使用），使用`Ctrl + Insert`，`Shift + Insert`代替，web终端中也可以使用右键复制粘贴
