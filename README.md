@@ -30,7 +30,7 @@ Ref to [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheats
   ```sh
   kubectl run nginx --image=nginx --restart=Never --dry-run=client -n mynamespace -o yaml > pod.yaml
   kubectl create -f pod.yaml
-  ```sh
+  ```
 
 - Most quick way to create a object
   
@@ -39,6 +39,12 @@ Ref to [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheats
   kubectl run nginx --image=nginx --restart=Never   (pod)
   kubectl run busybox --image=busybox --restart=OnFailure   (job)
   kubectl run busybox --image=busybox --schedule="* * * * *"  --restart=OnFailure (cronJob)
+  ```
+
+- Switch k8s cluster
+
+  ```sh
+  kubectl config use-context (cluster name)
   ```
 
 ## Resources allowed during exam
