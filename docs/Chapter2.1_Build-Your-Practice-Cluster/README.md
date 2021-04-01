@@ -6,10 +6,12 @@ https://learn.acloud.guru/course/d068441f-75b4-4fe8-a7a6-df9153f24a35/learn/638c
 
 CentOS8, Medium Size
 
+cloud_user/!@#$qwer
+
 - Kube Master
 
-  54.254.246.233
-  172.31.20.33
+  13.235.244.8
+  172.31.38.124
 
 - Kube Worker 1
 
@@ -42,9 +44,10 @@ Reference : [](https://www.tecmint.com/install-a-kubernetes-cluster-on-centos-8/
 ```sh
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 
-dnf install -y https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.4.3-3.1.el7.x86_64.rpm
-
+# 之前版本 dnf install -y https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.4.3-3.1.el7.x86_64.rpm
+dnf install -y https://download.docker.com/linux/centos/8/x86_64/stable/Packages/containerd.io-1.4.4-3.1.el8.x86_64.rpm
 dnf install -y docker-ce docker-ce-cli
+
 systemctl enable docker
 systemctl start docker
 ```
@@ -127,7 +130,8 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 Then you can join any number of worker nodes by running the following on each as root:
 
 ```sh
-kubeadm join 172.31.20.33:6443 --token ctbbdo.pnvi47m9mokvbu09 --discovery-token-ca-cert-hash sha256:3c34515b3e5aa33bcc6779b107617d60a91ef15f6c18186f42a3623860bef400
+kubeadm join 172.31.38.124:6443 --token e6t62k.w18eb18k2l4e368b \
+    --discovery-token-ca-cert-hash sha256:a102fa1ce5e0712743e0c1fed8922e39e7e46b94af4f3b7a9ef189cdbcbf28d4 
 ```
 
 ###  選擇安裝 flannel
@@ -138,7 +142,8 @@ kubectl apply -f https://github.com/coreos/flannel/raw/master/Documentation/kube
 ### WorkNode Add into Cluster
 
 ```sh
-kubeadm join 172.31.20.33:6443 --token ctbbdo.pnvi47m9mokvbu09 --discovery-token-ca-cert-hash sha256:3c34515b3e5aa33bcc6779b107617d60a91ef15f6c18186f42a3623860bef400
+kubeadm join 172.31.38.124:6443 --token e6t62k.w18eb18k2l4e368b \
+    --discovery-token-ca-cert-hash sha256:a102fa1ce5e0712743e0c1fed8922e39e7e46b94af4f3b7a9ef189cdbcbf28d4 
 ```
 
 ## Reference 
